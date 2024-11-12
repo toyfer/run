@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use serde::Deserialize;
 use std::fs;
 use std::collections::HashMap;
