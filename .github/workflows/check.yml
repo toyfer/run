@@ -1,0 +1,23 @@
+name: Clippy Cehck
+
+on:
+  push:
+    branches:
+      - main
+    pull_request:
+      - main
+
+jobs:
+  clippy:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update dependencies
+        run: cargo Update
+
+      - name: Run Clippy
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
