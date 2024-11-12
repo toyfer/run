@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-sarde = { version = "1.0", features = ["derive"] }
-sarde_json = "1.0"
-sarde_yaml = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.8"
 toml = "0.5"
-winres = "0.3"
+winres = "0.1"

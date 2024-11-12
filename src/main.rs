@@ -1,10 +1,13 @@
-use sarde::Deserialize;
+use serde::Deserialize;
 use std::fs;
+use std::collections::HashMap;
+use std::process::Command;
 
 #[derive(Deserialize)]
 struct Config {
     env_vars_path: String,
 }
+
 #[derive(Deserialize)]
 struct EnvVarList {
     alias: HashMap<String, String>,
