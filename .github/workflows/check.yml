@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Update dependencies
-        run: cargo Update
+        run: cargo update
 
       - name: Run Clippy
         run: cargo clippy --all-targets --all-features -- -D warnings
